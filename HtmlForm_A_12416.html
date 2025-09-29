@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form - 12111</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul class="menu">
+      <li><a href="HtmlCssBasic_A_12111.html">Kembali ke Halaman Utama</a></li>
+      <li><a href="JSBasic_A_12111.html">Halaman Javascript</a></li>
+  </ul>
+
+  <h2>Form Pendaftaran Mahasiswa</h2>
+
+  <form onsubmit="return validateForm()">
+    <table cellspacing="4" cellpadding="4">
+      <!-- TODO: Tambahkan field input teks untuk Nama Mahasiswa dengan tipe teks dan WAJIB DIISI. -->
+
+      <!-- TODO: Tambahkan field radio button untuk Jenis Kelamin (Laki-laki dan Perempuan) dan WAJIB DIISI -->
+
+      <!-- TODO: Tambahkan dropdown untuk Program Studi dengan id="prodi", 
+           opsi: "Pilih Prodi", "Informatika", "Teknik Industri", "Sistem Informasi" dan WAJIB DIISI. -->
+
+      <!-- TODO: Tambahkan field input angka untuk Nomor Telepon dengan tipe number dan WAJIB DIISI. -->
+
+      <!-- TODO: Tambahkan field input tanggal untuk Tanggal Lahir dengan tipe date dan WAJIB DIISI. -->
+
+      <!-- TODO: Tambahkan field input email dengan tipe email dan WAJIB DIISI. -->
+
+      <!-- TODO: Tambahkan field input password dengan tipe password dan WAJIB DIISI. -->
+
+      <!-- TODO: Tambahkan fieldset untuk Hal Favorit, berisi:
+           - Fieldset "Game" dengan checkbox untuk Roblox, Magic Chess, dan beberapa game lain yang ingin kamu tambahkan.
+           - Fieldset "Film" dengan checkbox untuk Drama, Action, Romance, Comedy, Horror.
+       -->
+           
+      <!-- TODO: Tambahkan textarea untuk Deskripsi dengan id="deskripsi" dan WAJIB DIISI. -->
+
+      <!-- TODO: Tambahkan field input Foto dengan tipe file dan WAJIB DIISI. -->
+
+      <!-- TODO: Tambahkan tombol submit dengan id="simpan" dan value="Simpan". -->
+
+      <!-- Contoh Field input : 
+            <tr>
+              <td><strong>Nama Mahasiswa</strong></td>
+              <td><input required type="text" id="namamhs" name="namamhs" size="30" /></td>
+            </tr> 
+      -->
+      <tr>
+        <td><strong>Nama Mahasiswa</strong></td>
+        <td><input required type="text" id="namamhs" name="namamhs" size="30" placeholder="Masukkan nama lengkap" /></td>
+      </tr>
+
+      <!-- Field radio button untuk Jenis Kelamin -->
+      <tr>
+        <td><strong>Jenis Kelamin</strong></td>
+        <td>
+          <input required type="radio" id="laki" name="jk" value="Laki-laki" /> Laki-laki
+          <input required type="radio" id="perempuan" name="jk" value="Perempuan" /> Perempuan
+        </td>
+      </tr>
+
+      <!-- Dropdown Program Studi -->
+      <tr>
+        <td><strong>Program Studi</strong></td>
+        <td>
+          <select required id="prodi" name="prodi">
+            <option value="">Pilih Prodi</option>
+            <option value="Informatika">Informatika</option>
+            <option value="Teknik Industri">Teknik Industri</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Input angka Nomor Telepon -->
+      <tr>
+        <td><strong>Nomor Telepon</strong></td>
+        <td><input required type="number" id="telepon" name="telepon" placeholder="08xxxxxxxxxx" /></td>
+      </tr>
+
+      <!-- Input tanggal Tanggal Lahir -->
+      <tr>
+        <td><strong>Tanggal Lahir</strong></td>
+        <td><input required type="date" id="tgllahir" name="tgllahir" /></td>
+      </tr>
+
+      <!-- Input email -->
+      <tr>
+        <td><strong>Email</strong></td>
+        <td><input required type="email" id="email" name="email" placeholder="example@email.com" /></td>
+      </tr>
+
+      <!-- Input password -->
+      <tr>
+        <td><strong>Password</strong></td>
+        <td><input required type="password" id="password" name="password" placeholder="Masukkan password" /></td>
+      </tr>
+
+      <!-- Fieldset Hal Favorit -->
+      <tr>
+        <td><strong>Hal Favorit</strong></td>
+        <td>
+          <fieldset>
+            <legend>Game</legend>
+            <input type="checkbox" name="game" value="Roblox" /> Roblox<br>
+            <input type="checkbox" name="game" value="Magic Chess" /> Magic Chess<br>
+            <input type="checkbox" name="game" value="Valorant" /> Valorant<br>
+            <input type="checkbox" name="game" value="Mobile Legends" /> Mobile Legends
+          </fieldset>
+
+          <fieldset>
+            <legend>Film</legend>
+            <input type="checkbox" name="film" value="Drama" /> Drama<br>
+            <input type="checkbox" name="film" value="Action" /> Action<br>
+            <input type="checkbox" name="film" value="Romance" /> Romance<br>
+            <input type="checkbox" name="film" value="Comedy" /> Comedy<br>
+            <input type="checkbox" name="film" value="Horror" /> Horror
+          </fieldset>
+        </td>
+      </tr>
+
+      <!-- Textarea Deskripsi -->
+      <tr>
+        <td><strong>Deskripsi Diri</strong></td>
+        <td>
+          <textarea required id="deskripsi" name="deskripsi" rows="5" cols="30" placeholder="Ceritakan sedikit tentang diri Anda..."></textarea>
+        </td>
+      </tr>
+
+      <!-- Input Foto -->
+      <tr>
+        <td><strong>Foto Profil</strong></td>
+        <td><input required type="file" id="foto" name="foto" accept=".jpg,.jpeg,.png" /></td>
+      </tr>
+
+      <!-- Tombol Submit -->
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <input type="submit" id="simpan" value="Simpan" />
+        </td>
+      </tr>
+
+    </table>
+  </form>
+
+  <script>
+    const validateForm = () =>alert("Data Berhasil Disimpan !");
+  </script>
+</body>
+</html>

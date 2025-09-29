@@ -8,8 +8,8 @@
 </head>
 <body>
   <ul class="menu">
-      <li><a href="HtmlCssBasic_A_12111.html" >Kembali ke Halaman Utama</a></li>
-      <li><a href="HtmlForm_A_12111.html" >Halaman Form</a></li>
+      <li><a href="HtmlCssBasic_A_12111.html" onclick="return confirm('Apakah Anda yakin ingin kembali ke Halaman Utama?')">Kembali ke Halaman Utama</a></li>
+      <li><a href="HtmlForm_A_12111.html" onclick="return confirm('Apakah Anda yakin ingin ke Halaman Form?')">Halaman Form</a></li>
       <!-- TODO: Pada bagian menu tambahkan Dialog box confirm ketika mengklik link tersebut. Clue : Gunakan OnClick dan return. -->
   </ul>
 
@@ -60,6 +60,45 @@
     // Jika ada isinya, hitung kuadrat angka tersebut dan tampilkan "Hasil kuadrat dari [angka] adalah [hasil]" 
     // di elemen dengan id="hasil".
     // Clue : gunakan document.getElementById("angka").value dan gunakan hasil.innerHTML.
+    // TODO: Buat fungsi ubahBiru()
+    function ubahBiru() {
+      const paragraf = document.getElementById("teks");
+      paragraf.innerHTML = "Teks sudah berubah menjadi biru!";
+      paragraf.style.color = "blue";
+    }
+
+    function ubahMerah() {
+      const paragraf = document.getElementById("teks");
+      paragraf.innerHTML = "Sekarang teks berwarna merah!";
+      paragraf.style.color = "red";
+    }
+
+    function ubahHijau() {
+      const paragraf = document.getElementById("teks");
+      paragraf.innerHTML = "Sekarang teks berwarna hijau!";
+      paragraf.style.color = "green";
+    }
+
+    function tampilkanNama() {
+      const nama = document.getElementById("inputNama").value;
+      if (nama === "") {
+        alert("Silakan isi nama dulu.");
+      } else {
+        alert("Halo, " + nama + "! Selamat Belajar HTML & JS :D");
+      }
+    }
+
+    function hitungKuadrat() {
+      const angka = document.getElementById("angka").value;
+      const hasil = document.getElementById("hasil");
+
+      if (angka === "") {
+        hasil.innerHTML = "Masukkan angka terlebih dahulu.";
+      } else {
+        const kuadrat = angka * angka;
+        hasil.innerHTML = "Hasil kuadrat dari " + angka + " adalah " + kuadrat;
+      }
+    }
   </script>
 </body>
 </html>
